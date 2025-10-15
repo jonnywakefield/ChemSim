@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjpy0jisdwuqw"]
+
+[ext_resource type="PackedScene" uid="uid://cogq4qydci7uy" path="res://Units/UnitProcess.tscn" id="1_b3cm6"]
+[ext_resource type="Script" uid="uid://css62gpo6308y" path="res://Units/source.gd" id="2_mwkf7"]
+[ext_resource type="Texture2D" uid="uid://cgfgfoejyf8uu" path="res://Sprites/BlankUnit.png" id="3_y1epk"]
+
+[node name="Source" groups=["all_units", "source_units"] instance=ExtResource("1_b3cm6")]
+script = ExtResource("2_mwkf7")
+composition_ratios = {
+"Methanol": 10.0
+}
+total_flow_rate = 1.0
+temperature = 25.0
+
+[node name="InputPort" parent="." index="0"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+texture = ExtResource("3_y1epk")

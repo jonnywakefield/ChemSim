@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnbb2xm88ud7v"]
+
+[ext_resource type="Script" uid="uid://chcdy3yvae6ss" path="res://inspector_panel.gd" id="1_jx1vq"]
+
+[node name="InspectorPanel" type="PanelContainer"]
+script = ExtResource("1_jx1vq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="DataLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Stream Data"
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Click a port to inspect"

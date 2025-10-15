@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cw8ow2lhupwre"]
+
+[ext_resource type="Script" uid="uid://css62gpo6308y" path="res://Units/source.gd" id="1_mwkf7"]
+[ext_resource type="PackedScene" uid="uid://3emgvfd648gi" path="res://Units/UnitPort.tscn" id="2_mwkf7"]
+[ext_resource type="Texture2D" uid="uid://cgfgfoejyf8uu" path="res://Sprites/BlankUnit.png" id="3_mwkf7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7cjb"]
+size = Vector2(126, 126)
+
+[node name="Source" type="Area2D" groups=["source_units"]]
+script = ExtResource("1_mwkf7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_j7cjb")
+
+[node name="OutputPort" parent="." instance=ExtResource("2_mwkf7")]
+position = Vector2(66, 0)
+type = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_mwkf7")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -24.0
+offset_top = -14.0
+offset_right = 32.0
+offset_bottom = 22.0
+text = "Source"

@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dme3rn42bhhpy"]
+
+[sub_resource type="GDScript" id="GDScript_pwh0m"]
+script/source = "class_name UnitPort
+extends Area2D
+
+var current_stream: StreamData = null
+
+signal port_clicked(port: UnitPort)
+
+enum PortType { INPUT, OUTPUT }
+@export var type: PortType = PortType.INPUT
+
+var parent_unit: Node2D
+
+func _ready():
+	parent_unit = get_parent()
+
+func _on_input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
+		emit_signal(\"port_clicked\", self)
+"
+
+[node name="PortArea2D" type="Area2D"]
+script = SubResource("GDScript_pwh0m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

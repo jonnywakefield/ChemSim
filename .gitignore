@@ -1,0 +1,30 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Godot-specific ignores
+!.godot/user_settings.tres
+!.godot/scenes/
+!.godot/imported/
+!.godot/project_metadata.cfg
+
+# General ignores
+*.o
+*.lo
+*.so
+*.a
+*.la
+*.pyc
+*.pyo
+*.swp
+*~
+.DS_Store
+
+# Exported binaries
+/export_presets.cfg
+/builds/
+/export/
+
+# Mono-specific ignores
+.mono/
+bin/
+obj/

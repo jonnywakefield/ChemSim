@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4srpvoulojtk"]
+
+[ext_resource type="PackedScene" uid="uid://cogq4qydci7uy" path="res://Units/UnitProcess.tscn" id="1_iso5a"]
+[ext_resource type="Script" uid="uid://bc4uqgyvfidw0" path="res://Units/distillation_process.gd" id="2_crwux"]
+[ext_resource type="Texture2D" uid="uid://fes1japswp8p" path="res://Sprites/DistillationUnit.png" id="2_t8p0t"]
+[ext_resource type="PackedScene" uid="uid://3emgvfd648gi" path="res://Units/UnitPort.tscn" id="3_t8p0t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iso5a"]
+size = Vector2(126, 254)
+
+[node name="DistillationProcess" groups=["all_units"] instance=ExtResource("1_iso5a")]
+script = ExtResource("2_crwux")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_iso5a")
+
+[node name="OutputPort" parent="." index="2"]
+visible = false
+
+[node name="OutputPortBottom" parent="." index="3" instance=ExtResource("3_t8p0t")]
+position = Vector2(64, 64)
+type = 1
+
+[node name="OutputPortTop" parent="." index="4" instance=ExtResource("3_t8p0t")]
+position = Vector2(64, -64)
+type = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="5"]
+texture = ExtResource("2_t8p0t")
