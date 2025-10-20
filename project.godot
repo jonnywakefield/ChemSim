@@ -13,17 +13,18 @@ config_version=5
 config/name="V0.2 Optimise Building"
 run/main_scene="uid://caunlmnl0ifup"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://Sprites/icon.svg"
+config/icon="res://assets/sprites/icon.svg"
 
 [autoload]
 
-SimulationManager="*res://simulation_manager.gd"
+SimulationManager="*res://src/managers/simulation_manager.gd"
 
 [global_group]
 
 source_units=""
 sink_units=""
 all_units=""
+all_ports=""
 
 [input]
 

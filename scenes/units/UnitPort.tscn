@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://3emgvfd648gi"]
+
+[ext_resource type="Script" uid="uid://hruvjv5j78fj" path="res://src/units/unit_port.gd" id="1_xv6nf"]
+[ext_resource type="Texture2D" uid="uid://d3ulaubpopmfl" path="res://assets/sprites/icon.svg" id="2_slh3l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xeqem"]
+radius = 15.0
+
+[node name="Port" type="Area2D" groups=["all_ports"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_xv6nf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.203125, 0.203125)
+texture = ExtResource("2_slh3l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xeqem")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

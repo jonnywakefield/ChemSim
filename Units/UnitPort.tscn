@@ -1,21 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://3emgvfd648gi"]
+[gd_scene load_steps=2 format=3 uid="uid://cnx05uy1hmbic"]
 
-[ext_resource type="Script" uid="uid://hruvjv5j78fj" path="res://Units/unit_port.gd" id="1_umdac"]
-[ext_resource type="Texture2D" uid="uid://d3ulaubpopmfl" path="res://Sprites/icon.svg" id="2_emecd"]
+[sub_resource type="GDScript" id="GDScript_pwh0m"]
+script/source = "class_name UnitPort
+extends Area2D
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xeqem"]
-radius = 15.0
+var current_stream: StreamData = null
 
-[node name="Port" type="Area2D"]
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("1_umdac")
+signal port_clicked(port: UnitPort)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.203125, 0.203125)
-texture = ExtResource("2_emecd")
+enum PortType { INPUT, OUTPUT }
+@export var type: PortType = PortType.INPUT
+
+var parent_unit: Node2D
+
+func _ready():
+	parent_unit = get_parent()
+
+func _on_input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
+		emit_signal(\"port_clicked\", self)
+"
+
+[node name="PortArea2D" type="Area2D"]
+script = SubResource("GDScript_pwh0m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_xeqem")
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
+[node name="Sprite2D" type="Sprite2D" parent="."]

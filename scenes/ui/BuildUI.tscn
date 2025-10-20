@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba50kh3o57ovw"]
+
+[ext_resource type="Script" uid="uid://b6ol5rts0o14j" path="res://src/ui/build_ui.gd" id="1_hikju"]
+
+[node name="BuildUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_hikju")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonBuild" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Build"
+
+[node name="ButtonConnect" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Pipe"
+
+[node name="ButtonInspect" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Inspect"
+
+[node name="ButtonSelect" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Select"
+
+[node name="ButtonDelete" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Delete"
+
+[node name="ToolIndicatorLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="BuildMenuContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.003
+anchor_right = 0.040000003
+anchor_bottom = 0.063
+offset_left = 5.5439997
+offset_top = 41.0
+offset_right = 2.9199982
+offset_bottom = 40.176
+
+[connection signal="pressed" from="HBoxContainer/ButtonBuild" to="." method="_on_button_build_pressed"]
+[connection signal="pressed" from="HBoxContainer/ButtonConnect" to="." method="_on_button_connect_pressed"]
+[connection signal="pressed" from="HBoxContainer/ButtonInspect" to="." method="_on_button_inspect_pressed"]
+[connection signal="pressed" from="HBoxContainer/ButtonSelect" to="." method="_on_button_select_pressed"]
+[connection signal="pressed" from="HBoxContainer/ButtonDelete" to="." method="_on_button_delete_pressed"]

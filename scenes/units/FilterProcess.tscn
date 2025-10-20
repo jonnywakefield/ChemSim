@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://1hh21fnaniud"]
+
+[ext_resource type="PackedScene" uid="uid://cogq4qydci7uy" path="res://scenes/units/UnitProcess.tscn" id="1_kx3an"]
+[ext_resource type="Script" uid="uid://bh1bknl8vnamd" path="res://src/units/filter_unit.gd" id="2_ip1n0"]
+[ext_resource type="Texture2D" uid="uid://ka6m0qsd2kdj" path="res://assets/sprites/FilterUnit.png" id="3_a1yrb"]
+
+[node name="FilterUnit" instance=ExtResource("1_kx3an")]
+script = ExtResource("2_ip1n0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="3"]
+texture = ExtResource("3_a1yrb")
