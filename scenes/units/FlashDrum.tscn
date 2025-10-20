@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://cav8bs6gpqu40"]
+
+[ext_resource type="PackedScene" uid="uid://cogq4qydci7uy" path="res://scenes/units/UnitProcess.tscn" id="1_fhtn6"]
+[ext_resource type="Script" uid="uid://c22ge8mogfmnf" path="res://src/units/flash_drum.gd" id="2_fhtn6"]
+[ext_resource type="PackedScene" uid="uid://3emgvfd648gi" path="res://scenes/units/UnitPort.tscn" id="3_kk2bx"]
+[ext_resource type="Texture2D" uid="uid://brwvpha1b1enl" path="res://assets/sprites/FlashDrum.png" id="4_fhtn6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iso5a"]
+size = Vector2(254, 126)
+
+[node name="FlashDrum" instance=ExtResource("1_fhtn6")]
+script = ExtResource("2_fhtn6")
+
+[node name="InputPort" parent="." index="0"]
+position = Vector2(-127, 1)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_iso5a")
+
+[node name="OutputPort" parent="." index="2"]
+visible = false
+
+[node name="OutputPortBottom" parent="." index="3" instance=ExtResource("3_kk2bx")]
+position = Vector2(64, 64)
+type = 1
+exit_direction = Vector2i(0, 1)
+
+[node name="OutputPortTop" parent="." index="4" instance=ExtResource("3_kk2bx")]
+position = Vector2(64, -65)
+type = 1
+exit_direction = Vector2i(0, -1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="5"]
+texture = ExtResource("4_fhtn6")

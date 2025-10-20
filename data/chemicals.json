@@ -1,0 +1,82 @@
+{
+"chemicals": [
+{
+"name": "Nitrogen",
+"formula": "N₂",
+"cas_number": "7727-37-9",
+"molecular_weight": 28.014,
+"normal_boiling_point_c": -195.8,
+"heat_capacity_j_mol_k": { "solid": null, "liquid": 56.5, "gas": 29.12 },
+"heat_of_vaporization_kj_mol": 5.57,
+"heat_of_fusion_kj_mol": 0.72,
+"standard_enthalpy_of_formation_kj_mol": 0,
+"density_kg_m3": { "solid": 1026, "liquid": 808, "gas": null },
+"antoine_coefficients": { "A": 6.78632, "B": 255.53, "C": -6.6 }
+},
+{
+"name": "Water",
+"formula": "H₂O",
+"cas_number": "7732-18-5",
+"molecular_weight": 18.015,
+"normal_boiling_point_c": 100.0,
+"heat_capacity_j_mol_k": { "solid": 37.7, "liquid": 75.38, "gas": 33.58 },
+"heat_of_vaporization_kj_mol": 40.66,
+"heat_of_fusion_kj_mol": 6.01,
+"standard_enthalpy_of_formation_kj_mol": -285.8,
+"density_kg_m3": { "solid": 917, "liquid": 997, "gas": null },
+"antoine_coefficients": { "A": 8.07131, "B": 1730.63, "C": 233.426 }
+},
+{
+"name": "Hydrogen",
+"formula": "H₂",
+"cas_number": "1333-74-0",
+"molecular_weight": 2.016,
+"normal_boiling_point_c": -252.9,
+"heat_capacity_j_mol_k": { "solid": null, "liquid": null, "gas": 28.84 },
+"heat_of_vaporization_kj_mol": 0.90,
+"heat_of_fusion_kj_mol": 0.117,
+"standard_enthalpy_of_formation_kj_mol": 0,
+"density_kg_m3": { "solid": 86.71, "liquid": 70.99, "gas": null },
+"antoine_coefficients": { "A": 6.7561, "B": 63.55, "C": -2.19 }
+},
+{
+"name": "Ammonia",
+"formula": "NH₃",
+"cas_number": "7664-41-7",
+"molecular_weight": 17.031,
+"normal_boiling_point_c": -33.34,
+"heat_capacity_j_mol_k": { "solid": null, "liquid": 80.8, "gas": 35.06 },
+"heat_of_vaporization_kj_mol": 23.33,
+"heat_of_fusion_kj_mol": 5.65,
+"standard_enthalpy_of_formation_kj_mol": -45.9,
+"density_kg_m3": { "solid": 817, "liquid": 681.9, "gas": null },
+"antoine_coefficients": { "A": 7.55466, "B": 1002.711, "C": 247.885 }
+},
+{
+"name": "Methanol",
+"formula": "CH₃OH",
+"cas_number": "67-56-1",
+"molecular_weight": 32.04,
+"normal_boiling_point_c": 64.7,
+"heat_capacity_j_mol_k": { "solid": null, "liquid": 81.6, "gas": 44.06 },
+"heat_of_vaporization_kj_mol": 35.21,
+"heat_of_fusion_kj_mol": 3.16,
+"standard_enthalpy_of_formation_kj_mol": -238.4,
+"density_kg_m3": { "solid": null, "liquid": 792, "gas": null },
+"antoine_coefficients": { "A": 8.08097, "B": 1582.271, "C": 239.726 }
+},
+{
+"name": "Methylamine",
+"formula": "CH₃NH₂",
+"cas_number": "74-89-5",
+"molecular_weight": 31.06,
+"normal_boiling_point_c": -6.3,
+"heat_capacity_j_mol_k": { "solid": null, "liquid": null, "gas": 47.7 },
+"heat_of_vaporization_kj_mol": 25.0,
+"heat_of_fusion_kj_mol": 6.09,
+"standard_enthalpy_of_formation_kj_mol": -22.97,
+"density_kg_m3": { "solid": null, "liquid": 662.8, "gas": null },
+"antoine_coefficients": { "A": 7.1083, "B": 929.0, "C": 226.0 }
+}
+]
+}

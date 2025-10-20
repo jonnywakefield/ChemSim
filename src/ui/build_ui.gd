@@ -11,6 +11,7 @@ var buildable_units = {
 	"Distillation": preload("res://scenes/units/DistillationProcess.tscn"),
 	"Mixer": preload("res://scenes/units/Mixer.tscn"),
 	"Splitter": preload("res://scenes/units/Splitter.tscn"),
+	"Flash Drum": preload("res://scenes/units/FlashDrum.tscn"),
 }
 # --------------------------------------------------------
 

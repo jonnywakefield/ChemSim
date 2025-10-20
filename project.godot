@@ -18,6 +18,7 @@ config/icon="res://assets/sprites/icon.svg"
 [autoload]
 
 SimulationManager="*res://src/managers/simulation_manager.gd"
+ChemicalDatabase="*res://src/core/ChemicalDatabase.gd"
 
 [global_group]
 

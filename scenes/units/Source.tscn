@@ -2,18 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://cogq4qydci7uy" path="res://scenes/units/UnitProcess.tscn" id="1_b3cm6"]
 [ext_resource type="Script" uid="uid://css62gpo6308y" path="res://src/units/source.gd" id="2_mwkf7"]
-[ext_resource type="Texture2D" uid="uid://cgfgfoejyf8uu" path="res://assets/sprites/BlankUnit.png" id="3_y1epk"]
+[ext_resource type="Texture2D" uid="uid://c1n0voxkhna5j" path="res://assets/sprites/Source2.png" id="3_imb4f"]
 
 [node name="Source" groups=["source_units"] instance=ExtResource("1_b3cm6")]
 script = ExtResource("2_mwkf7")
 molar_flows = {
-"H2O": 0.5,
-"Methanol": 0.5
+"Nitrogen": 0.5,
+"Water": 0.5
 }
-temperature = 25.0
+temperature = 298.15
 
 [node name="InputPort" parent="." index="0"]
 visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
-texture = ExtResource("3_y1epk")
+texture = ExtResource("3_imb4f")

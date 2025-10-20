@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cogq4qydci7uy" path="res://scenes/units/UnitProcess.tscn" id="1_l61f3"]
 [ext_resource type="Script" uid="uid://culvdbqv16kp7" path="res://src/units/splitter.gd" id="2_brcub"]
 [ext_resource type="PackedScene" uid="uid://3emgvfd648gi" path="res://scenes/units/UnitPort.tscn" id="3_beokb"]
-[ext_resource type="Texture2D" uid="uid://cgfgfoejyf8uu" path="res://assets/sprites/BlankUnit.png" id="4_vng2v"]
+[ext_resource type="Texture2D" uid="uid://dapub0r53cpnp" path="res://assets/sprites/Splitter2.png" id="4_2h7pa"]
 
 [node name="Splitter" instance=ExtResource("1_l61f3")]
 script = ExtResource("2_brcub")
@@ -20,4 +20,4 @@ position = Vector2(64, -32)
 type = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="5"]
-texture = ExtResource("4_vng2v")
+texture = ExtResource("4_2h7pa")

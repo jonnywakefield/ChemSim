@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2uod60ugq2me"]
 
-[ext_resource type="PackedScene" uid="uid://cogq4qydci7uy" path="res://scenes/units/UnitProcess.tscn" id="1_b8rwh"]
-[ext_resource type="Script" uid="uid://cg243l32y6nmb" path="res://src/units/reactor_process.gd" id="2_y8kiu"]
-[ext_resource type="Texture2D" uid="uid://d0v5t5ae5mjle" path="res://assets/sprites/ReactorUnit.png" id="3_x8hp7"]
+[ext_resource type="PackedScene" uid="uid://cogq4qydci7uy" path="res://scenes/units/UnitProcess.tscn" id="1_3xekn"]
+[ext_resource type="Script" uid="uid://cg243l32y6nmb" path="res://src/units/reactor_process.gd" id="2_emv3w"]
+[ext_resource type="Texture2D" uid="uid://d2p6htobcv7uh" path="res://assets/sprites/Reactor2.png" id="3_asot5"]
 
-[node name="ReactorProcess" instance=ExtResource("1_b8rwh")]
-script = ExtResource("2_y8kiu")
+[node name="ReactorProcess" instance=ExtResource("1_3xekn")]
+script = ExtResource("2_emv3w")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
-texture = ExtResource("3_x8hp7")
+texture = ExtResource("3_asot5")

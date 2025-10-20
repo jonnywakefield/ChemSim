@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cogq4qydci7uy" path="res://scenes/units/UnitProcess.tscn" id="1_h4cb0"]
 [ext_resource type="Script" uid="uid://cvuhlhaip80tl" path="res://src/units/sink.gd" id="2_we83m"]
-[ext_resource type="Texture2D" uid="uid://cgfgfoejyf8uu" path="res://assets/sprites/BlankUnit.png" id="3_l6kp1"]
+[ext_resource type="Texture2D" uid="uid://c0nd2kqq454s8" path="res://assets/sprites/Sink2.png" id="3_qikvt"]
 
 [node name="Sink" groups=["sink_units"] instance=ExtResource("1_h4cb0")]
 script = ExtResource("2_we83m")
@@ -11,4 +11,4 @@ script = ExtResource("2_we83m")
 visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]
-texture = ExtResource("3_l6kp1")
+texture = ExtResource("3_qikvt")
